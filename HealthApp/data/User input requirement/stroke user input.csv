@@ -1,0 +1,28 @@
+No,Field,Data type,Unit,min,max,Note
+1,Height,interger,,,,
+2,Weight,interger,,,,
+3,Physical Health,,days,1,30,Number of days having problem with physical health in the last 30 days
+4,Mental health,,days,1,30,Number of days having problem with mental health in the last 30 days
+5,Sex,,male/female,,,
+6,Sleep time ,integer,hour,1,24,per day
+7,Age categories,, 18-24,,,
+,,, 25-29,,,
+,,, 30-34,,,
+,,, 35-39,,,
+,,, 40-44,,,
+,,, 45-49,,,
+,,, 50-54,,,
+,,, 55-59,,,
+,,, 60-64,,,
+,,, 65-69,,,
+,,, 70-74,,,
+,,, 75-79,,,
+,,, 80 or older,,,
+8,Difficult Walking,boolean,yes/no,,,
+9,Asthma,boolean,yes/no,,,
+10,Diabetic,boolean,yes/no,,,
+11,Smoking,boolean,yes/no,,,
+12,Alcohol drinking,boolean,yes/no,,,
+13,KidneyDisease,boolean,yes/no,,,
+14,PhysicalActivity,boolean,yes/no,,,
+15,SkinCancer,boolean,yes/no,,,
