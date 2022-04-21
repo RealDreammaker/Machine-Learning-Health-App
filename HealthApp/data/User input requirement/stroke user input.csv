@@ -1,6 +1,6 @@
 No,Field,Data type,Unit,min,max,Note
-1,Height,,,,,
-2,Weight,Float,,12,95,
+1,Height,interger,,,,
+2,Weight,interger,,,,
 3,Physical Health,,days,1,30,Number of days having problem with physical health in the last 30 days
 4,Mental health,,days,1,30,Number of days having problem with mental health in the last 30 days
 5,Sex,,male/female,,,
