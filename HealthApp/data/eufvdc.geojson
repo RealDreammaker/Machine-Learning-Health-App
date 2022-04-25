@@ -1,0 +1,439 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.4588,50.6745 ]
+    },
+    "properties": {
+    "FIELD1":0,
+    "country":"Belgium",
+    "0 portions":17.4,
+    "From 1 to 4 portions":67.5,
+    "5 portions or more":15.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 24.521,42.625 ]
+    },
+    "properties": {
+    "FIELD1":1,
+    "country":"Bulgaria",
+    "0 portions":47.1,
+    "From 1 to 4 portions":47.8,
+    "5 portions or more":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 15.2812,49.848 ]
+    },
+    "properties": {
+    "FIELD1":2,
+    "country":"Czechia",
+    "0 portions":48.2,
+    "From 1 to 4 portions":44.1,
+    "5 portions or more":7.7
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.096,56.113 ]
+    },
+    "properties": {
+    "FIELD1":3,
+    "country":"Denmark",
+    "0 portions":38.6,
+    "From 1 to 4 portions":38.5,
+    "5 portions or more":22.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.9877,51.3819 ]
+    },
+    "properties": {
+    "FIELD1":4,
+    "country":"Germany",
+    "0 portions":33.2,
+    "From 1 to 4 portions":55.9,
+    "5 portions or more":10.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.977,58.777 ]
+    },
+    "properties": {
+    "FIELD1":5,
+    "country":"Estonia",
+    "0 portions":39.4,
+    "From 1 to 4 portions":47.3,
+    "5 portions or more":13.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -7.588,53.214 ]
+    },
+    "properties": {
+    "FIELD1":6,
+    "country":"Ireland",
+    "0 portions":19,
+    "From 1 to 4 portions":48.1,
+    "5 portions or more":32.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.617,39.787 ]
+    },
+    "properties": {
+    "FIELD1":7,
+    "country":"Greece",
+    "0 portions":33.1,
+    "From 1 to 4 portions":54.5,
+    "5 portions or more":12.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -3.388,40.617 ]
+    },
+    "properties": {
+    "FIELD1":8,
+    "country":"Spain",
+    "0 portions":23.4,
+    "From 1 to 4 portions":65.7,
+    "5 portions or more":10.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.543,46.656 ]
+    },
+    "properties": {
+    "FIELD1":9,
+    "country":"France",
+    "0 portions":25.2,
+    "From 1 to 4 portions":55.3,
+    "5 portions or more":19.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 16.385,45.754 ]
+    },
+    "properties": {
+    "FIELD1":10,
+    "country":"Croatia",
+    "0 portions":28.5,
+    "From 1 to 4 portions":61.7,
+    "5 portions or more":9.8
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 11.1084,44.3713 ]
+    },
+    "properties": {
+    "FIELD1":11,
+    "country":"Italy",
+    "0 portions":23.8,
+    "From 1 to 4 portions":65.7,
+    "5 portions or more":10.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 32.928,34.894 ]
+    },
+    "properties": {
+    "FIELD1":12,
+    "country":"Cyprus",
+    "0 portions":33.2,
+    "From 1 to 4 portions":58.8,
+    "5 portions or more":7.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.0173,57.017 ]
+    },
+    "properties": {
+    "FIELD1":13,
+    "country":"Latvia",
+    "0 portions":53.9,
+    "From 1 to 4 portions":38.9,
+    "5 portions or more":7.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 24.23,55.342 ]
+    },
+    "properties": {
+    "FIELD1":14,
+    "country":"Lithuania",
+    "0 portions":41,
+    "From 1 to 4 portions":43.1,
+    "5 portions or more":15.9
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.113,49.671 ]
+    },
+    "properties": {
+    "FIELD1":15,
+    "country":"Luxembourg",
+    "0 portions":48.1,
+    "From 1 to 4 portions":38.3,
+    "5 portions or more":13.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.618,47.174 ]
+    },
+    "properties": {
+    "FIELD1":16,
+    "country":"Hungary",
+    "0 portions":36.3,
+    "From 1 to 4 portions":55.5,
+    "5 portions or more":8.2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.4137,35.9024 ]
+    },
+    "properties": {
+    "FIELD1":17,
+    "country":"Malta",
+    "0 portions":36.4,
+    "From 1 to 4 portions":52.1,
+    "5 portions or more":11.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.0102,52.1704 ]
+    },
+    "properties": {
+    "FIELD1":18,
+    "country":"Netherlands",
+    "0 portions":41.8,
+    "From 1 to 4 portions":28.7,
+    "5 portions or more":29.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.705,47.65 ]
+    },
+    "properties": {
+    "FIELD1":19,
+    "country":"Austria",
+    "0 portions":35.8,
+    "From 1 to 4 portions":58.7,
+    "5 portions or more":5.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.72,52.442 ]
+    },
+    "properties": {
+    "FIELD1":20,
+    "country":"Poland",
+    "0 portions":37.5,
+    "From 1 to 4 portions":53.9,
+    "5 portions or more":8.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -7.9373,40.957 ]
+    },
+    "properties": {
+    "FIELD1":21,
+    "country":"Portugal",
+    "0 portions":27.4,
+    "From 1 to 4 portions":58.2,
+    "5 portions or more":14.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 25.119,45.933 ]
+    },
+    "properties": {
+    "FIELD1":22,
+    "country":"Romania",
+    "0 portions":73.6,
+    "From 1 to 4 portions":24,
+    "5 portions or more":2.4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.534,46.037 ]
+    },
+    "properties": {
+    "FIELD1":23,
+    "country":"Slovenia",
+    "0 portions":31.9,
+    "From 1 to 4 portions":62.8,
+    "5 portions or more":5.3
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.4434,48.8595 ]
+    },
+    "properties": {
+    "FIELD1":24,
+    "country":"Slovakia",
+    "0 portions":41.3,
+    "From 1 to 4 portions":50.2,
+    "5 portions or more":8.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 26.192,62.716 ]
+    },
+    "properties": {
+    "FIELD1":25,
+    "country":"Finland",
+    "0 portions":37.5,
+    "From 1 to 4 portions":49,
+    "5 portions or more":13.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.0,66.2188 ]
+    },
+    "properties": {
+    "FIELD1":26,
+    "country":"Sweden",
+    "0 portions":37.7,
+    "From 1 to 4 portions":54.6,
+    "5 portions or more":7.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -18.417,64.826 ]
+    },
+    "properties": {
+    "FIELD1":27,
+    "country":"Iceland",
+    "0 portions":34.1,
+    "From 1 to 4 portions":56.7,
+    "5 portions or more":9.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.3031,61.3701 ]
+    },
+    "properties": {
+    "FIELD1":28,
+    "country":"Norway",
+    "0 portions":29.2,
+    "From 1 to 4 portions":62.2,
+    "5 portions or more":8.6
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 20.699,44.021 ]
+    },
+    "properties": {
+    "FIELD1":29,
+    "country":"Serbia",
+    "0 portions":44.6,
+    "From 1 to 4 portions":47.3,
+    "5 portions or more":8.1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 34.188,39.144 ]
+    },
+    "properties": {
+    "FIELD1":30,
+    "country":"Turkey",
+    "0 portions":37.5,
+    "From 1 to 4 portions":59.7,
+    "5 portions or more":2.8
+    }
+  }
+]
+}

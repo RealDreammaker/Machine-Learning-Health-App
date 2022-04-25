@@ -1,0 +1,39 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#map,
+body,
+html {
+  height: 100%;
+}
+
+.obese10{
+  
+  margin:8px
+  
+}
+
+.obese15{
+ 
+  margin:8px;
+  
+}
+
+.obese20{
+  
+  margin:8px
+}
+
+.obese25{
+ 
+  margin:8px;
+  
+}
+
+.obese25p{
+  
+  margin:8px
+}
+
