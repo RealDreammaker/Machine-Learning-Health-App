@@ -44,10 +44,13 @@ function showResult(data) {
     var alertOutcomeDisplay = d3.select("#alertOutcome");
 
     if (data["result"][0] == 1) {
-        outcome = "Survived";
+        outcome = "Our predictor indicates that you have low levels of stress";
         alertOutcomeDisplay.attr("class", "alert alert-success");
     } else if (data["result"][0] == 0) {
-        outcome = "Dead";
+        outcome = "Our predictor indicates that you have have no stress";
+        alertOutcomeDisplay.attr("class", "alert alert-info");
+    } else if (data["result"][0] == 2) {
+        outcome = "Our predictor indicates that you have have high levels of stress";
         alertOutcomeDisplay.attr("class", "alert alert-info");
     }
 

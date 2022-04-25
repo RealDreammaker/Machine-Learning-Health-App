@@ -92,7 +92,7 @@ function showResult(data) {
     if (data["result"][0] == 1) {
         outcome = "You have 11% change of having a stroke";
         alertOutcomeDisplay.attr("class", "alert alert-success");
-    } else if (data["result"][0] == 0) {
+    } else if (data["result"][0] == 3) {
         outcome = "You have 96% change of having no stroke";
         alertOutcomeDisplay.attr("class", "alert alert-info");
     }
