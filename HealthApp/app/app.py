@@ -94,13 +94,13 @@ def stroke_predict():
     # rename columns and sort as per the
     # order columns were trained on
     try:
-        df = pd.DataFrame([data_stroke])[stroke_col_order]
+        stroke_df = pd.DataFrame([data_stroke])[stroke_col_order]
     except Exception as e:
         print("Error Parsing Input Data")
         print(e)
         return "Error"
 
-    strokeX = df.values
+    strokeX = stroke_df.values
 
     stroke_model = pickle.load(open('HealthApp\models\LRmodel_stroke_prediction','rb'))
 
@@ -122,25 +122,23 @@ def stress_dash():
 def stress_predict():
     data_stress = request.json
 
-    stress_col_order = ["Humidity", "Temperature", "Step count"]
-
     # create dataframe from received data
     # rename columns and sort as per the
     # order columns were trained on
     try:
-        df = pd.DataFrame([data_stress])[stress_col_order]
+        stress_df = pd.DataFrame([data_stress])
     except Exception as e:
         print("Error Parsing Input Data")
         print(e)
         return "Error"
 
-    stressX = df.values
+    stressX = stress_df.values
 
-    stress_model = pickle.load(open('HealthApp\notebooks\KNNmodel_stress_prediction','rb'))
+    stress_model = pickle.load(open('HealthApp\models\KNNmodel_stress_prediction','rb'))
 
     # convert nparray to list so we can
     # serialise as json
-    stress_result = stress_model.predict(stressX).tolist()
+    stress_result = stress_model.predict(stressX)
 
     return jsonify({"result": stress_result})
 

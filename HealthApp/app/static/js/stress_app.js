@@ -16,8 +16,7 @@ function doCheck(event) {
     var data = {
         "Humidity": parseInt(hum),
         "Temperature": parseInt(temp),
-        "Step count": parseFloat(steps),
-
+        "Step count": parseInt(steps),
     }
 
     console.log(data);
@@ -45,13 +44,13 @@ function showResult(data) {
 
     if (data["result"][0] == 1) {
         outcome = "Our predictor indicates that you have low levels of stress";
-        alertOutcomeDisplay.attr("class", "alert alert-success");
+        alertOutcomeDisplay.attr("class", "alert alert-info");
     } else if (data["result"][0] == 0) {
         outcome = "Our predictor indicates that you have have no stress";
-        alertOutcomeDisplay.attr("class", "alert alert-info");
+        alertOutcomeDisplay.attr("class", "alert alert-success");
     } else if (data["result"][0] == 2) {
         outcome = "Our predictor indicates that you have have high levels of stress";
-        alertOutcomeDisplay.attr("class", "alert alert-info");
+        alertOutcomeDisplay.attr("class", "alert alert-danger");
     }
 
     alertOutcomeDisplay.text(outcome);
