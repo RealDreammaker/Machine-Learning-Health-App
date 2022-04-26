@@ -3,6 +3,7 @@ from flask import Flask, jsonify, render_template, request
 import pickle
 
 
+
 app = Flask(__name__)
 
 
@@ -16,30 +17,30 @@ def index():
 
 
 @app.route("/predict", methods=["POST"])
-def predict():
-    data = request.json
+def stress_dash():
+    data_stress = request.json
 
-    col_order = ["Humidity", "Temperature", "Step count"]
+    stress_col_order = ["Humidity", "Temperature", "Step count"]
 
     # create dataframe from received data
     # rename columns and sort as per the
     # order columns were trained on
     try:
-        df = pd.DataFrame([data])[col_order]
+        df = pd.DataFrame([data_stress])[stress_col_order]
     except Exception as e:
         print("Error Parsing Input Data")
         print(e)
         return "Error"
 
-    X = df.values
+    stressX = df.values
 
-    model = pickle.load(open('HealthApp\models\KNNmodel_stress_prediction','rb'))
+    stress_model = pickle.load(open('HealthApp\models\KNNmodel_stress_prediction','rb'))
 
     # convert nparray to list so we can
     # serialise as json
-    result = model.predict(X).tolist()
+    stress_result = stress_model.predict(stressX).tolist()
 
-    return jsonify({"result": result})
+    return jsonify({"result": stress_result})
 
 
 if __name__ == '__main__':

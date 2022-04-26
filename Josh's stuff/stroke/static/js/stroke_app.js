@@ -69,7 +69,7 @@ function doCheck(event) {
     console.log(data);
 
     d3.json(
-        "/predict", {
+        "/stroke_predict", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
@@ -92,7 +92,7 @@ function showResult(data) {
     if (data["result"][0] == 1) {
         outcome = "You have 11% change of having a stroke";
         alertOutcomeDisplay.attr("class", "alert alert-success");
-    } else if (data["result"][0] == 3) {
+    } else if (data["result"][0] == 0) {
         outcome = "You have 96% change of having no stroke";
         alertOutcomeDisplay.attr("class", "alert alert-info");
     }
