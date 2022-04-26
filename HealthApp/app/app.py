@@ -122,11 +122,13 @@ def stress_dash():
 def stress_predict():
     data_stress = request.json
 
+    stress_col_order = ["Humidity","Temperature","Step count"]
+
     # create dataframe from received data
     # rename columns and sort as per the
     # order columns were trained on
     try:
-        stress_df = pd.DataFrame([data_stress])
+        stress_df = pd.DataFrame([data_stress])[stress_col_order]
     except Exception as e:
         print("Error Parsing Input Data")
         print(e)
@@ -138,7 +140,7 @@ def stress_predict():
 
     # convert nparray to list so we can
     # serialise as json
-    stress_result = stress_model.predict(stressX)
+    stress_result = stress_model.predict(stressX).tolist()
 
     return jsonify({"result": stress_result})
 
