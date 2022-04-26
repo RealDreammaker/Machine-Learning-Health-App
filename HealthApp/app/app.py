@@ -1,6 +1,8 @@
 import pandas as pd
 from flask import Flask, jsonify, render_template, request
 import pickle
+from sklearn.preprocessing import StandardScaler
+
 
 app = Flask(__name__)
 
@@ -129,6 +131,8 @@ def stress_predict():
     # order columns were trained on
     try:
         stress_df = pd.DataFrame([data_stress])[stress_col_order]
+
+
     except Exception as e:
         print("Error Parsing Input Data")
         print(e)
