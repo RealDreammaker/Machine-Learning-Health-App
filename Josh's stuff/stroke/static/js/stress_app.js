@@ -23,7 +23,7 @@ function doCheck(event) {
     console.log(data);
 
     d3.json(
-        "/predict", {
+        "/stress_predict", {
             method: "POST",
             body: JSON.stringify(data),
             headers: {

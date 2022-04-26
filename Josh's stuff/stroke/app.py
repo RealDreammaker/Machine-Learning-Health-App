@@ -136,7 +136,7 @@ def stress_predict():
 
     stressX = df.values
 
-    stress_model = pickle.load(open('HealthApp\models\KNNmodel_stress_prediction','rb'))
+    stress_model = pickle.load(open('HealthApp\notebooks\KNNmodel_stress_prediction','rb'))
 
     # convert nparray to list so we can
     # serialise as json
