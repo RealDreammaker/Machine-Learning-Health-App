@@ -17,19 +17,8 @@ https://github.com/DCornea5/Final-Project.git
     Kelvin Nguyen (KN)
 
 #### Software
-    Python  
-    Pandas  
-    Seaborn  
-    Matplotlib  
-    Plotly Express  
-    TQDM
-    Sklearn
-    XGBoost
-    nltk  
-    Pickle  
-    Flask API
-    HTML/CSS/Bootstrap  
-    etc.  
+    Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn, XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
+      
 
 #### Datasets
     heart_disease.csv  
