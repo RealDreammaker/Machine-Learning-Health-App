@@ -103,8 +103,7 @@ def stroke_predict():
         return "Error"
 
     strokeX = stroke_df.values
-    file_path = pathlib.Path(r'static/models/LRmodel_stroke_prediction')
-    stroke_model = pickle.load(open(file_path,'rb'))
+    stroke_model = pickle.load(open('HealthApp\models\LRmodel_stroke_prediction','rb'))
 
     # convert nparray to list so we can
     # serialise as json
@@ -140,8 +139,7 @@ def stress_predict():
 
     stressX = stress_df.values
     
-    file_path = pathlib.Path(r"static/models/KNNmodel_stress_prediction")
-    stress_model = pickle.load(open(file_path,'rb'))
+    stress_model = pickle.load(open("HealthApp\models/KNNmodel_stress_prediction",'rb'))
     
     # convert nparray to list so we can
     # serialise as json
@@ -178,14 +176,53 @@ def insurance_predict():
     print(InsuranceA)
     print("- " * 50)
 
-    file_path = pathlib.Path(r"static/models/KNNmodel_travel_insurance_prediction")
-    insurance_model = pickle.load(open(file_path,'rb'))
+    insurance_model = pickle.load(open("HealthApp\models\KNNmodel_travel_insurance_prediction",'rb'))
     
     # convert nparray to list so we can
     # serialise as json
     insurance_result = insurance_model.predict(InsuranceA).tolist()
 
     return jsonify({"result": insurance_result})
+
+@app.route('/body_performance_dash.html')
+def bp_dash():
+    """
+    Display the main webpage where users can enter their details
+    which we will then pass to the prediction endpoint
+    """
+    return render_template("body_performance_dash.html")
+
+@app.route("/bp_predict", methods=["POST"])
+def bp_predict():
+    data_bp = request.json
+
+    bp_col_order = [
+        "age", "gender", "height_cm", "weight_kg", "body fat_%",
+        "diastolic", "systolic", "gripForce", "sit and bend forward_cm",
+        "sit-ups counts", "broad jump_cm"
+    ]
+
+    # create dataframe from received data
+    # rename columns and sort as per the
+    # order columns were trained on
+    try:
+        bp_df = pd.DataFrame([data_bp])[bp_col_order]
+
+
+    except Exception as e:
+        print("Error Parsing Input Data")
+        print(e)
+        return "Error"
+
+    bpX = bp_df.values
+    
+    bp_model = pickle.load(open("HealthApp\models\\body_performance_prediction_lgb",'rb'))
+    
+    # convert nparray to list so we can
+    # serialise as json
+    bp_result = bp_model.predict(bpX).tolist()
+
+    return jsonify({"result": bp_result})
 
 
 if __name__ == '__main__':
