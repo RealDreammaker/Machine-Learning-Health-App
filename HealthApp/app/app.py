@@ -2,7 +2,7 @@ import pandas as pd
 from flask import Flask, jsonify, render_template, request
 import pickle
 from sklearn.preprocessing import StandardScaler
-
+import pathlib
 
 app = Flask(__name__)
 
@@ -103,8 +103,8 @@ def stroke_predict():
         return "Error"
 
     strokeX = stroke_df.values
-
-    stroke_model = pickle.load(open('HealthApp\models\LRmodel_stroke_prediction','rb'))
+    file_path = pathlib.Path(r'static/models/LRmodel_stroke_prediction')
+    stroke_model = pickle.load(open(file_path,'rb'))
 
     # convert nparray to list so we can
     # serialise as json
@@ -139,14 +139,53 @@ def stress_predict():
         return "Error"
 
     stressX = stress_df.values
-
-    stress_model = pickle.load(open('HealthApp\models\KNNmodel_stress_prediction','rb'))
-
+    
+    file_path = pathlib.Path(r"static/models/KNNmodel_stress_prediction")
+    stress_model = pickle.load(open(file_path,'rb'))
+    
     # convert nparray to list so we can
     # serialise as json
     stress_result = stress_model.predict(stressX).tolist()
 
     return jsonify({"result": stress_result})
+
+@app.route('/travel_insurance_dash.html')
+def travel_insurance_dash():
+    """
+    Display the main webpage where users can enter their details
+    which we will then pass to the prediction endpoint
+    """
+    return render_template("travel_insurance_dash.html")
+
+@app.route("/insurance_predict", methods=["POST"])
+def insurance_predict():
+    data_insurance = request.json
+
+    try:
+        insurance_df = pd.DataFrame([data_insurance])
+
+
+    except Exception as e:
+        print("Error Parsing Input Data")
+        print(e)
+        return "Error"
+
+    print("- " * 50 +"DF:")
+    print(insurance_df)  
+    
+    InsuranceA = insurance_df.values
+    print("- " * 50 +"Array:")
+    print(InsuranceA)
+    print("- " * 50)
+
+    file_path = pathlib.Path(r"static/models/KNNmodel_travel_insurance_prediction")
+    insurance_model = pickle.load(open(file_path,'rb'))
+    
+    # convert nparray to list so we can
+    # serialise as json
+    insurance_result = insurance_model.predict(InsuranceA).tolist()
+
+    return jsonify({"result": insurance_result})
 
 
 if __name__ == '__main__':
