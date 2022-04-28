@@ -1,6 +1,6 @@
 # Final-Project
 
-![Logo](Images/HealthAppLogo.png)  
+![Logo](HealthApp/images/HealthAppLogo.png)  
 
 ## Health App - Machine Learning  
 
