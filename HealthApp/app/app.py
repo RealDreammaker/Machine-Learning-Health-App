@@ -218,7 +218,7 @@ def bp_predict():
     return jsonify({"result": bp_result})
 
 @app.route('/references.html')
-def bp_dash():
+def reference_dash():
     """
     Display a list of links to the datasets that we used
     """
