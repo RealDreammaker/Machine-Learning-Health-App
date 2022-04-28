@@ -66,13 +66,17 @@ function showResult(data) {
     var alertOutcomeDisplay = d3.select("#alertOutcome");
 
     if (data["result"][0] == 1) {
-        outcome = "Our predictor indicates that you have low levels of stress";
-        alertOutcomeDisplay.attr("class", "alert alert-info");
-    } else if (data["result"][0] == 0) {
-        outcome = "Our predictor indicates that you have have no stress";
+        outcome = "Our model indicates that you have high physical performance indicators";
         alertOutcomeDisplay.attr("class", "alert alert-success");
     } else if (data["result"][0] == 2) {
-        outcome = "Our predictor indicates that you have have high levels of stress";
+        outcome = "Our model indicates that you have moderate physical performance indicators";
+        alertOutcomeDisplay.attr("class", "alert alert-info");
+    } else if (data["result"][0] == 3) {
+        outcome = "Our model indicates that you have low physical performance indicators";
+        alertOutcomeDisplay.attr("class", "alert alert-warning");
+    }
+    else if (data["result"][0] == 4) {
+        outcome = "Our model indicates that you have very low physical performance indicators";
         alertOutcomeDisplay.attr("class", "alert alert-danger");
     }
 

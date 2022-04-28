@@ -9,16 +9,16 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    Display the main webpage where users can select a model
+    they would like to use
     """
     return render_template("index.html")
 
 @app.route('/index.html')
 def landing():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    Returns a user to the main webpage where they can select a model
+    they would like to use
     """
     return render_template("index.html")
 
@@ -26,14 +26,17 @@ def landing():
 @app.route('/stroke_dash.html')
 def stroke_dash():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    This page holds the Stroke Prediction Dash, which allows users to input info to predict
+    the likelyhood of them experiencing a stroke, either as High or Low
     """
     return render_template("stroke_dash.html")
 
 
 @app.route("/stroke_predict", methods=["POST"])
 def stroke_predict():
+    """
+    Runs Stroke Prediction Model and returns JSON result
+    """
     data_stroke = request.json
 
     stroke_col_order = [
@@ -45,7 +48,7 @@ def stroke_predict():
         "PhysicalActivity_Yes", "Asthma_Yes", "KidneyDisease_Yes", "SkinCancer_Yes",
     ]
 
-    # convert age
+    # convert age from number to category
     data_stroke["AgeCategory_18-24"] = 0
     data_stroke["AgeCategory_25-29"] = 0
     data_stroke["AgeCategory_30-34"] = 0
@@ -87,14 +90,8 @@ def stroke_predict():
     elif (data_stroke["age"] == "80 or older"):
         data_stroke["AgeCategory_80 or older"] = 1
 
-
     del data_stroke["age"]
 
-
-
-    # create dataframe from received data_stroke
-    # rename columns and sort as per the
-    # order columns were trained on
     try:
         stroke_df = pd.DataFrame([data_stroke])[stroke_col_order]
     except Exception as e:
@@ -105,8 +102,6 @@ def stroke_predict():
     strokeX = stroke_df.values
     stroke_model = pickle.load(open('HealthApp\models\LRmodel_stroke_prediction','rb'))
 
-    # convert nparray to list so we can
-    # serialise as json
     stroke_result = stroke_model.predict(strokeX).tolist()
 
     return jsonify({"result": stroke_result})
@@ -114,23 +109,23 @@ def stroke_predict():
 @app.route('/stress_dash.html')
 def stress_dash():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    This page holds the BPhysical Stress Dash, which allows users to input info to
+    define whether they experience no, low or high physical stress
     """
     return render_template("stress_dash.html")
 
 @app.route("/stress_predict", methods=["POST"])
 def stress_predict():
+    """
+    Runs Physical Stress Prediction Model and returns JSON result
+    """
+
     data_stress = request.json
 
     stress_col_order = ["Humidity","Temperature","Step count"]
 
-    # create dataframe from received data
-    # rename columns and sort as per the
-    # order columns were trained on
     try:
         stress_df = pd.DataFrame([data_stress])[stress_col_order]
-
 
     except Exception as e:
         print("Error Parsing Input Data")
@@ -139,11 +134,8 @@ def stress_predict():
 
     stressX = stress_df.values
     
-
     stress_model = pickle.load(open(file_path,'rb'))
-    
-    # convert nparray to list so we can
-    # serialise as json
+
     stress_result = stress_model.predict(stressX).tolist()
 
     return jsonify({"result": stress_result})
@@ -151,18 +143,21 @@ def stress_predict():
 @app.route('/travel_insurance_dash.html')
 def travel_insurance_dash():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    This page holds the Travel Insurance Dash, which allows users to input info 
+    and provides a reccommendation on whether or not they should purchase travel
+    insurance
     """
     return render_template("travel_insurance_dash.html")
 
 @app.route("/insurance_predict", methods=["POST"])
 def insurance_predict():
+    """
+    Runs Travel Insurance Reccommendation Model and returns JSON result
+    """
     data_insurance = request.json
 
     try:
         insurance_df = pd.DataFrame([data_insurance])
-
 
     except Exception as e:
         print("Error Parsing Input Data")
@@ -188,13 +183,16 @@ def insurance_predict():
 @app.route('/body_performance_dash.html')
 def bp_dash():
     """
-    Display the main webpage where users can enter their details
-    which we will then pass to the prediction endpoint
+    This page holds the Body Performance Dash, which allows users to input info to predict
+    their physical ability level ranking from High to Very Low
     """
     return render_template("body_performance_dash.html")
 
 @app.route("/bp_predict", methods=["POST"])
 def bp_predict():
+    """
+    Runs Body Performance Prediction Model and returns JSON result
+    """
     data_bp = request.json
 
     bp_col_order = [
@@ -203,12 +201,8 @@ def bp_predict():
         "sit-ups counts", "broad jump_cm"
     ]
 
-    # create dataframe from received data
-    # rename columns and sort as per the
-    # order columns were trained on
     try:
         bp_df = pd.DataFrame([data_bp])[bp_col_order]
-
 
     except Exception as e:
         print("Error Parsing Input Data")
@@ -218,12 +212,17 @@ def bp_predict():
     bpX = bp_df.values
     
     bp_model = pickle.load(open("HealthApp\models\\body_performance_prediction_lgb",'rb'))
-    
-    # convert nparray to list so we can
-    # serialise as json
+
     bp_result = bp_model.predict(bpX).tolist()
 
     return jsonify({"result": bp_result})
+
+@app.route('/references.html')
+def bp_dash():
+    """
+    Display a list of links to the datasets that we used
+    """
+    return render_template("references.html")
 
 
 if __name__ == '__main__':
