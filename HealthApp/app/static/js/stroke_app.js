@@ -90,10 +90,10 @@ function showResult(data) {
     var alertOutcomeDisplay = d3.select("#alertOutcome");
 
     if (data["result"][0] == 1) {
-        outcome = "You have 11% change of having a stroke";
+        outcome = "You have a high chance of having a stroke";
         alertOutcomeDisplay.attr("class", "alert alert-success");
     } else if (data["result"][0] == 0) {
-        outcome = "You have 96% change of having no stroke";
+        outcome = "You should have no stroke";
         alertOutcomeDisplay.attr("class", "alert alert-info");
     }
 
