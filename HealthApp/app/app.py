@@ -100,7 +100,7 @@ def stroke_predict():
         return "Error"
 
     strokeX = stroke_df.values
-    stroke_model = pickle.load(open('HealthApp\models\LRmodel_stroke_prediction','rb'))
+    stroke_model = pickle.load(open('models/LRmodel_stroke_prediction','rb'))
 
     stroke_result = stroke_model.predict(strokeX).tolist()
 
@@ -134,7 +134,7 @@ def stress_predict():
 
     stressX = stress_df.values
     
-    stress_model = pickle.load(open(file_path,'rb'))
+    stress_model = pickle.load(open('models/KNNmodel_stress_prediction','rb'))
 
     stress_result = stress_model.predict(stressX).tolist()
 
@@ -172,7 +172,7 @@ def insurance_predict():
     print(InsuranceA)
     print("- " * 50)
 
-    insurance_model = pickle.load(open("HealthApp\models\KNNmodel_travel_insurance_prediction",'rb'))
+    insurance_model = pickle.load(open("models/KNNmodel_travel_insurance_prediction",'rb'))
     
     # convert nparray to list so we can
     # serialise as json
@@ -211,14 +211,14 @@ def bp_predict():
 
     bpX = bp_df.values
     
-    bp_model = pickle.load(open("HealthApp\models\\body_performance_prediction_lgb",'rb'))
+    bp_model = pickle.load(open("models/body_performance_prediction_lgb",'rb'))
 
     bp_result = bp_model.predict(bpX).tolist()
 
     return jsonify({"result": bp_result})
 
 @app.route('/references.html')
-def bp_dash():
+def reference_dash():
     """
     Display a list of links to the datasets that we used
     """

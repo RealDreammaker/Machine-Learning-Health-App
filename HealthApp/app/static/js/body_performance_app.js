@@ -64,7 +64,7 @@ function showResult(data) {
 
     var outcome = "Unknown";
     var alertOutcomeDisplay = d3.select("#alertOutcome");
-
+    console.log(data["result"][0]);
     if (data["result"][0] == 1) {
         outcome = "Our model indicates that you have high physical performance indicators";
         alertOutcomeDisplay.attr("class", "alert alert-success");
