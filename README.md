@@ -17,7 +17,7 @@ https://github.com/DCornea5/Final-Project.git
     Kelvin Nguyen (KN)
 
 #### Software
-    Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn, XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
+    Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn,  XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
       
 
 #### Datasets
@@ -33,10 +33,17 @@ https://github.com/DCornea5/Final-Project.git
     Dataworld
 
 #### Machine Learning Models  
-    Stroke Prediction
-    Physical Stress Prediction
-    Travel Insurance Indicator
-    Body Performance Classification
+    Stroke Prediction - Logistic Regression 
+    Physical Stress Prediction - KNN Classification
+    Travel Insurance Indicator - KNeighborsClassifier
+    Body Performance Classification - Light Gradient Boosting
+
+  
+#### Heroku Deployment 
+    https://health-app-ss.herokuapp.com/index.html
+
+ 
+
 
 
 
