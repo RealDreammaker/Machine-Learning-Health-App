@@ -134,7 +134,7 @@ def stress_predict():
 
     stressX = stress_df.values
     
-    stress_model = pickle.load(open(file_path,'rb'))
+    stress_model = pickle.load(open("HealthApp\models\KNNmodel_stress_prediction",'rb'))
 
     stress_result = stress_model.predict(stressX).tolist()
 
@@ -211,7 +211,7 @@ def bp_predict():
 
     bpX = bp_df.values
     
-    bp_model = pickle.load(open("HealthApp\models\\body_performance_prediction_lgb",'rb'))
+    bp_model = pickle.load(open("HealthApp\models\body_performance_prediction_lgb",'rb'))
 
     bp_result = bp_model.predict(bpX).tolist()
 

@@ -13,6 +13,9 @@ function doCheck(event) {
     var temp = d3.select("#inputTemp").node().value;
     var steps = d3.select("#inputSteps").node().value;
 
+    // Convert the temperature from celcius to fahrenheit
+    temp = (temp/5*9) + 32
+
     var data = {
         "Humidity": parseInt(hum),
         "Temperature": parseInt(temp),
