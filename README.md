@@ -1,6 +1,6 @@
 # Final-Project
 
-![Logo](HealthApp/images/HealthAppLogo.png)  
+![Logo](images/HealthAppLogo.png)  
 
 ## Health App - Machine Learning  
 
@@ -40,16 +40,16 @@ https://github.com/DCornea5/Final-Project.git
 
 #### Visualisations
 
-![Stress_Prediction_Stress_Predication_Temperature_vs_Humidity](HealthApp/images/Stress_Predication_Temperature_vs_Humidity.PNG)
+![Stress_Prediction_Stress_Predication_Temperature_vs_Humidity](images/Stress_Predication_Temperature_vs_Humidity.PNG)
 
-![Stroke_Prediction_Age_Category_Count](HealthApp/images/Stroke_Prediction_Age_Category_Count.png)
+![Stroke_Prediction_Age_Category_Count](images/Stroke_Prediction_Age_Category_Count.png)
 
-![Travel_Insurance_Customers_by_Age](HealthApp/images/Travel_Insurance_Customer_by_Age.png)
+![Travel_Insurance_Customers_by_Age](images/Travel_Insurance_Customer_by_Age.png)
 
-![Body_Performance_Blood_Presure](HealthApp/images/Body_Performance_Blood_Pressure_by_Class_DC_Fig6a.png)  
+![Body_Performance_Blood_Presure](images/Body_Performance_Blood_Pressure_by_Class_DC_Fig6a.png)  
 
 #### Heroku Deployment 
-[Heroku_HealthApp](https://health-app-ah.herokuapp.com/)
+[Heroku_HealthApp](https://mlhealthapp.herokuapp.com/)
 
   
 
