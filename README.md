@@ -17,7 +17,8 @@ https://github.com/DCornea5/Final-Project.git
     Kelvin Nguyen (KN)
 
 #### Software
-    Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn,  XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
+    Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn,  
+    XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
       
 
 #### Datasets
@@ -40,7 +41,8 @@ https://github.com/DCornea5/Final-Project.git
 
   
 #### Heroku Deployment 
-    https://health-app-ss.herokuapp.com/index.html
+[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)
+  
 
  
 
