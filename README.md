@@ -40,12 +40,13 @@ https://github.com/DCornea5/Final-Project.git
 
 #### Visualisations
 
-![Stress_Prediction_Correlations](HealthApp/images/Stress_Prediction_Correlations.PNG)
+![Stress_Prediction_Correlations](HealthApp/images/Stress_Prediction_Correlations.PNG=100x100)
 ![Stress_Prediction_Stress_Predication_Temperature_vs_Humidity](HealthApp/images/Stress_Predication_Temperature_vs_Humidity.PNG)
 ![Body_Performance_Height_Age_Distribution](HealthApp/images/Body_Performance_Height_Age_Distribution_DC_Fig3.png)
-![Stroke_Prediction_Age_Category_Count](HealthApp/images/Stroke_Prediction_Age_Category_Count)
-![Travel_Insurance_Customers_by_Age](HealthApp/images/Travel_Insurance_Customer_by_Age)
+![Stroke_Prediction_Age_Category_Count](HealthApp/images/Stroke_Prediction_Age_Category_Count.png)
+![Travel_Insurance_Customers_by_Age](HealthApp/images/Travel_Insurance_Customer_by_Age.png)
   
+
 #### Heroku Deployment 
 [Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)
   
