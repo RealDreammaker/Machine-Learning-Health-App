@@ -49,7 +49,8 @@ https://github.com/DCornea5/Final-Project.git
 ![Body_Performance_Blood_Presure](HealthApp/images/Body_Performance_Blood_Pressure_by_Class_DC_Fig6a.png)  
 
 #### Heroku Deployment 
-[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)
+[Heroku_HealthApp](https://health-app-ah.herokuapp.com/)
+
   
 
  
