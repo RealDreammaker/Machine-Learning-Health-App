@@ -32,7 +32,7 @@ function doCheck(event) {
     bmi = weight / (height/100) ** 2
 
     // calculate body fat  https://www.gaiam.com/blogs/discover/how-to-calculate-your-ideal-body-fat-percentage#:~:text=Men%3A-,(1.20%20x%20BMI)%20%2B%20(0.23%20x%20Age,)%20%2D%2016.2%20%3D%20Body%20Fat%20Percentage
-    bodyFat = (1.20  * bmi) + (0.23 * age) - 5.4
+    var bodyFat = (1.20  * bmi) + (0.23 * age) - 5.4
     var data = {
         "age": parseInt(age),
         "gender": parseGender(gender),
