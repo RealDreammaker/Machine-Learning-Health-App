@@ -230,6 +230,54 @@ def reference_dash():
     """
     return render_template("references.html")
 
+@app.route('/stress_scatter.html')
+def stress_scatter_visuals():
+    """
+    Display a list of links to the visuals for stress data
+    """
+    return render_template("stress_scatter.html")
+
+@app.route('/stress_triangle.html')
+def stress_triangle_visuals():
+    """
+    Display a list of links to the visuals for stress data
+    """
+    return render_template("stress_triangle.html")
+
+@app.route('/bp_scatter.html')
+def bp_scatter_visuals():
+    """
+    Display a list of links to the visuals for body performance data
+    """
+    return render_template("bp_scatter.html")
+
+@app.route('/bp_scatter2.html')
+def bp_scatter2_visuals():
+    """
+    Display a list of links to the visuals for body performance data
+    """
+    return render_template("bp_scatter2.html")
+
+@app.route('/ins_pie.html')
+def ins_pie_visuals():
+    """
+    Display a list of links to the visuals for travel insurance data
+    """
+    return render_template("ins_pie.html")
+
+@app.route('/stroke_bar.html')
+def stroke_bar_visuals():
+    """
+    Display a list of links to the visuals for travel insurance data
+    """
+    return render_template("stroke_bar.html")
+
+@app.route('/about_us.html')
+def about_us():
+    """
+    Display information of the DAJK team
+    """
+    return render_template("about_us.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
