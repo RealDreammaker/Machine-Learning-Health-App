@@ -4,6 +4,9 @@ import pickle
 from sklearn.preprocessing import StandardScaler
 import pathlib
 
+import warnings
+warnings.filterwarnings("ignore")
+
 app = Flask(__name__)
 
 @app.route('/')
