@@ -46,7 +46,7 @@ https://github.com/DCornea5/Final-Project.git
 
 ![Travel_Insurance_Customers_by_Age](HealthApp/images/Travel_Insurance_Customer_by_Age.png)
 
-![Body_Performance_Height_Age_Distribution](HealthApp/images/Body_Performance_Height_Age_Distribution_DC_Fig3.png)  
+![Body_Performance_Blood_Presure](HealthApp/images/Body_Performance_Blood_Pressure_by_Class_DC_Fig6a.png)  
 
 #### Heroku Deployment 
 [Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)
