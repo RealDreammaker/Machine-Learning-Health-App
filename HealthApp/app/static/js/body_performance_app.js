@@ -13,7 +13,7 @@ function doCheck(event) {
     var gender = d3.select("#inputGender").node().value;
     var height = d3.select("#inputHeight").node().value;
     var weight = d3.select("#inputWeight").node().value;
-    var bodyFat = d3.select("#inputBodyFat").node().value;
+    // var bodyFat = d3.select("#inputBodyFat").node().value;
     var diastolic = d3.select("#inputDiastolic").node().value;
     var systolic = d3.select("#inputSystolic").node().value;
     var gripForce = d3.select("#inputGrip").node().value;
@@ -27,7 +27,12 @@ function doCheck(event) {
         else
             return 0
     }
+    
+    // calculate bmi
+    bmi = weight / (height/100) ** 2
 
+    // calculate body fat  https://www.gaiam.com/blogs/discover/how-to-calculate-your-ideal-body-fat-percentage#:~:text=Men%3A-,(1.20%20x%20BMI)%20%2B%20(0.23%20x%20Age,)%20%2D%2016.2%20%3D%20Body%20Fat%20Percentage
+    bodyFat = (1.20  * bmi) + (0.23 * age) - 5.4
     var data = {
         "age": parseInt(age),
         "gender": parseGender(gender),
