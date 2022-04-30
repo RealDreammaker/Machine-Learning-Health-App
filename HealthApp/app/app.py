@@ -100,7 +100,7 @@ def stroke_predict():
         return "Error"
 
     strokeX = stroke_df.values
-    stroke_model = pickle.load(open('models/LRmodel_stroke_prediction','rb'))
+    stroke_model = pickle.load(open('static/models/LRmodel_stroke_prediction','rb'))
 
     stroke_result = stroke_model.predict(strokeX).tolist()
 
@@ -134,11 +134,8 @@ def stress_predict():
 
     stressX = stress_df.values
     
-<<<<<<< HEAD
-    stress_model = pickle.load(open("HealthApp\models\KNNmodel_stress_prediction",'rb'))
-=======
-    stress_model = pickle.load(open('models/KNNmodel_stress_prediction','rb'))
->>>>>>> 0dbf0276fe933a1806600bd01b341dcd225f4f85
+
+    stress_model = pickle.load(open('static/models/KNNmodel_stress_prediction','rb'))
 
     stress_result = stress_model.predict(stressX).tolist()
 
@@ -176,7 +173,7 @@ def insurance_predict():
     print(InsuranceA)
     print("- " * 50)
 
-    insurance_model = pickle.load(open("models/KNNmodel_travel_insurance_prediction",'rb'))
+    insurance_model = pickle.load(open("static/models/KNNmodel_travel_insurance_prediction",'rb'))
     
     # convert nparray to list so we can
     # serialise as json
@@ -215,11 +212,9 @@ def bp_predict():
 
     bpX = bp_df.values
     
-<<<<<<< HEAD
-    bp_model = pickle.load(open("HealthApp\models\body_performance_prediction_lgb",'rb'))
-=======
-    bp_model = pickle.load(open("models/body_performance_prediction_lgb",'rb'))
->>>>>>> 0dbf0276fe933a1806600bd01b341dcd225f4f85
+
+
+    bp_model = pickle.load(open("static/models/body_performance_prediction_lgb",'rb'))
 
     bp_result = bp_model.predict(bpX).tolist()
 
