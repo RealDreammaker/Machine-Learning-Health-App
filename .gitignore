@@ -130,8 +130,8 @@ dmypy.json
 .pyre/
 
 # Customised ignore local folders
-*backup
-*Backup
+*backup*
+*Backup*
 *.vscode
 *.ipynb_checkpoints
 
