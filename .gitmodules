@@ -1,0 +1,3 @@
+[submodule "mlhealthapp"]
+	path = mlhealthapp
+	url = https://git.heroku.com/mlhealthapp.git
