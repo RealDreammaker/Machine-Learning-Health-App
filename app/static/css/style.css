@@ -1,0 +1,168 @@
+/* ******************************************************************************************************************************* */
+/* https://bashooka.com/coding/web-background-animation-effects/ */
+/* ******************************************************************************************************************************* */
+
+body {
+    background-color: whitesmoke;
+    filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
+    background-image: url(//img.alicdn.com/tps/TB1d.u8MXXXXXXuXFXXXXXXXXXX-1900-790.jpg);
+    background-size: 100%;
+    background-position-y: top;
+    background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
+    background-image: -webkit-linear-gradient(135deg, #003073, #029797);
+    background-image: -moz-linear-gradient(45deg, #003073, #029797);
+    background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
+    background-image: -o-linear-gradient(45deg, #003073, #029797);
+    background-image: linear-gradient(135deg, #003073, #029797);
+    /* text-align: center; */
+    color: white;
+    margin: 0px;
+    overflow: auto;
+}
+
+/* ******************************************************************************************************************************* */
+/* https://www.1001fonts.com/ */
+/* ******************************************************************************************************************************* */
+
+@font-face {
+    font-family: newestShape;
+    src: url(NewestShape-Bold.ttf);
+}
+  
+h1n {
+    font-family: newestShape;
+    font: size 80px;
+}
+
+h5n {
+    font-family: newestShape;
+    font-size:xx-large;
+}
+
+/* ******************************************************************************************************************************* */
+/* https://alvarotrigo.com/blog/css-text-animations/ */
+/* ******************************************************************************************************************************* */
+
+.waviy {
+position: relative;
+}
+
+.waviy span {
+position: relative;
+display: inline-block;
+font-family: newestShape;
+font-size: 80px;
+color: red;
+text-transform: uppercase;
+animation: flip 2s infinite;
+animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+    0%,80% {
+        transform: rotateY(360deg) 
+    }
+}
+
+/* ******************************************************************************************************************************* */
+/* https://blog.hubspot.com/website/css-animation-examples */
+/* https://dev.to/babib/amazing-pure-html-and-css-background-animations-4dim */
+/* https://alvarotrigo.com/blog/animated-backgrounds-css/ */
+/* https://www.sliderrevolution.com/resources/css-animated-background/ */
+/* Random color animation balls, required js */
+/* ******************************************************************************************************************************* */
+
+.ball {
+    position: absolute;
+    border-radius: 90%;
+    opacity: 0.7;
+  }
+
+/* ******************************************************************************************************************************* */
+/* Round corner box */
+/* ******************************************************************************************************************************* */
+
+.box {
+    border-radius: 15px 15px;
+}
+
+/* ******************************************************************************************************************************* */
+/* Hover navigation bar menu */
+/* ******************************************************************************************************************************* */
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 1px;
+    background: white;
+    transition: 0.4s
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: white
+}
+
+.nav-link {
+    padding: 5px 5px;
+    transition: 0.2s
+}
+
+/* ******************************************************************************************************************************* */
+/* Horizontal line*/
+/* ******************************************************************************************************************************* */
+.hr1 {
+    border: 0;
+    height: 15px;
+    background: #095484;
+    background-image: linear-gradient(to right, #ccc, #095484, #ccc);
+}
+.hr2 {
+border: 0;
+height: 5px;
+background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(9, 84, 132), rgba(0, 0, 0, 0));
+}
+.hr3 {
+height: 15px;
+border: 0;
+box-shadow: inset 0 12px 12px -12px rgba(9, 84, 132);
+}
+.hr4 {
+border-top: 3px double #095484;
+}
+.hr5 {
+background-color: #fff;
+border-top: 2px dashed #095484;
+}
+.hr6 {
+border-top: 3px dotted #095484;
+}
+.hr7 {
+height: 30px;
+border-style: solid;
+border-color: #095484;
+border-width: 1px 0 0 0;
+border-radius: 20px;
+}
+.hr8 {
+display: block;
+content: "";
+height: 30px;
+margin-top: -31px;
+border-style: solid;
+border-color: #095484;
+border-width: 0 0 1px 0;
+border-radius: 20px;
+}
+  /* ******************************************************************************************************************************* */
+/* #carouselExampleCaptions .carousel-item img {  
+    height: 400px !important;
+} */
