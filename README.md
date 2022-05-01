@@ -2,7 +2,7 @@
 
 ![Logo](images/HealthAppLogo.png)  
 
-## Health App - Machine Learning  
+## Health App - Machine Learning   
 
 
 Scope: Build a Health app to perform health predictions for various scenarios by utilising machine learning algorithms, python libraries and host on a cloud platform with public access.
