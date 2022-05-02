@@ -66,9 +66,7 @@ function doCheck(event) {
         "SkinCancer_Yes": parseBool(cancer),
     }
 
-    // check for missing field values 
-    console.log("sleeptime: " + sleepTime);
-    
+    // check for missing field values  
     var errorMessage = "Please enter:"; //13 characters
 
     if (sleepTime==""){errorMessage+= " Sleep time;" }

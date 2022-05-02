@@ -45,19 +45,43 @@ function doCheck(event) {
 
     console.log(data);
 
-    d3.json(
-        "/insurance_predict", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
+    // check for missing field values  
+    var errorMessage = "Please enter:"; //13 characters
+
+    if (age==""){errorMessage+= " Age;" }
+    if (annualincome==""){errorMessage+= " Annual Income;"}
+    if (FamilyMembers==""){errorMessage+= " Family Members;"}
+
+
+    console.log(errorMessage)
+    console.log(data);
+
+    if (errorMessage.length > 13) {
+        var outcome = "Unknown";
+        var alertOutcomeDisplay = d3.select("#alertOutcome");
+        outcome = errorMessage
+        alertOutcomeDisplay.attr("class", "alert alert-danger");
+        alertOutcomeDisplay.text(outcome);
+        alertOutcomeDisplay.style("display", "block");
+    }
+    
+    else {
+        d3.json(
+            "/stroke_predict", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
             }
-        }
-    ).then(
-        (data) => showResult(data)
-    );
+        ).then(
+            (data) => showResult(data)
+        );
+    }
 
 }
+
+
 
 function showResult(data) {
     console.log("showResult");

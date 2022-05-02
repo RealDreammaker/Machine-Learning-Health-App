@@ -13,7 +13,6 @@ function doCheck(event) {
     var gender = d3.select("#inputGender").node().value;
     var height = d3.select("#inputHeight").node().value;
     var weight = d3.select("#inputWeight").node().value;
-    // var bodyFat = d3.select("#inputBodyFat").node().value;
     var diastolic = d3.select("#inputDiastolic").node().value;
     var systolic = d3.select("#inputSystolic").node().value;
     var gripForce = d3.select("#inputGrip").node().value;
@@ -49,19 +48,48 @@ function doCheck(event) {
 
     console.log(data);
 
-    d3.json(
-        "/bp_predict", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
+    // check for missing field values  
+    var errorMessage = "Please enter:"; //13 characters
+
+    if (age==""){errorMessage+= " Age;" }
+    if (height==""){errorMessage+= " Height;"}
+    if (weight==""){errorMessage+= " Weight;"}
+    if (diastolic==""){errorMessage+= " Diastolic Blood Pressure;"}
+    if (systolic==""){errorMessage+= " Systolic Blood Pressure;" }
+    if (gripForce==""){errorMessage+= " Grip Force;"}
+    if (reach==""){errorMessage+= " Sit and Reach Length;"}
+    if (sitUp==""){errorMessage+= " Sit Up Count;"}
+    if (jump==""){errorMessage+= " Standing Jump;"}
+
+    console.log(errorMessage)
+    console.log(data);
+
+    if (errorMessage.length > 13) {
+        var outcome = "Unknown";
+        var alertOutcomeDisplay = d3.select("#alertOutcome");
+        outcome = errorMessage
+        alertOutcomeDisplay.attr("class", "alert alert-danger");
+        alertOutcomeDisplay.text(outcome);
+        alertOutcomeDisplay.style("display", "block");
+    }
+    
+    else {
+        d3.json(
+            "/stroke_predict", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
             }
-        }
-    ).then(
-        (data) => showResult(data)
-    );
+        ).then(
+            (data) => showResult(data)
+        );
+    }
 
 }
+
+
 
 function showResult(data) {
     console.log("showResult");
