@@ -46,7 +46,7 @@ function doCheck(event) {
     
     else {
         d3.json(
-            "/stroke_predict", {
+            "/stress_predict", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
