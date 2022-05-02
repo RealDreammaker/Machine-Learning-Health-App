@@ -42,10 +42,10 @@ DAJK Team: “Does AI Just Know”?
 <img src="images\models.png" width="50%" height="50%">
 
 ### Model creation
-For exploratory data analysis, train, test, validate and generating models we use Jupiter Notebooks
-[Stroke Prediction Model](notebooks\stroke_prediction3.ipynb)
-[Physical Stress Model](notebooks\stress_predicton_final.ipynb)
-[Body Performance Model](notebooks\body_performance.ipynb)
+For exploratory data analysis, train, test, validate and generating models we use Jupiter Notebooks</br>
+[Stroke Prediction Model](notebooks\stroke_prediction3.ipynb)</br>
+[Physical Stress Model](notebooks\stress_predicton_final.ipynb)</br>
+[Body Performance Model](notebooks\body_performance.ipynb)</br>
 [Travel Insurance Prediction Model](notebooks\travel_insurance_prediction.ipynb)
 
 ### Heroku Deployment 
