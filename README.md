@@ -6,10 +6,11 @@
 ## Health App - Machine Learning   
 
 ### Scope
-    Build a Health app to perform health predictions for various scenarios by utilising machine learning algorithms, python libraries and host on a cloud platform with public access.
+    Build a Health app to perform health predictions for various scenarios by utilising machine learning algorithms, python libraries 
+    and host on a cloud platform with public access.
 
 ### About us: 
-DAJK Team: “Does AI Just Know”? 
+    DAJK Team: “Does AI Just Know”? 
     Daniela Cornea (DC)
     Anh Huong (AH)
     Josh Lowe (JL)
