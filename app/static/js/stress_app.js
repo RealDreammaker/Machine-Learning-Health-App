@@ -14,7 +14,10 @@ function doCheck(event) {
     var steps = d3.select("#inputSteps").node().value;
 
     // Convert the temperature from celcius to fahrenheit
+<<<<<<< HEAD
     
+=======
+>>>>>>> 21d92efce79daf44781606c1cd56d73079496fc5
 
     var data = {
         "Humidity": parseInt(hum),
@@ -30,8 +33,14 @@ function doCheck(event) {
     if (hum==""){errorMessage+= " Humidity;" }
     if (temp==""){errorMessage+= " Temperature;"}
     if (steps==""){errorMessage+= " Step Count;"}
+<<<<<<< HEAD
  
     temp = (temp/5*9) + 32
+=======
+
+    temp = (temp/5*9) + 32
+
+>>>>>>> 21d92efce79daf44781606c1cd56d73079496fc5
 
     console.log(errorMessage)
     console.log(data);
@@ -47,7 +56,7 @@ function doCheck(event) {
     
     else {
         d3.json(
-            "/stroke_predict", {
+            "/stress_predict", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {

@@ -75,7 +75,7 @@ function doCheck(event) {
     
     else {
         d3.json(
-            "/stroke_predict", {
+            "/bp_predict", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
