@@ -6,8 +6,9 @@
 ## Health App - Machine Learning   
 
 ### Scope
-    Build a Health app to perform health predictions for various scenarios by utilising machine learning algorithms, python libraries 
-    and host on a cloud platform with public access.
+    Build a Health app to perform health predictions for various scenarios by 
+    utilising machine learning algorithms, python libraries and
+    host on a cloud platform with public access.
 
 ### About us: 
     DAJK Team: “Does AI Just Know”? 
@@ -40,7 +41,7 @@
 
 ### Machine Learning Models Overview
 
-<img src="images\models.png" width="50%" height="50%">
+<img src="images\models.png" width="70%" height="70%">
 
 ### Model creation
 For exploratory data analysis, train, test, validate and generating models we use Jupiter Notebooks</br>
