@@ -43,13 +43,13 @@ DAJK Team: “Does AI Just Know”?
 
 ### Model creation
 For exploratory data analysis, train, test, validate and generating models we use Jupiter Notebooks</br>
-[Stroke Prediction Model](notebooks\stroke_prediction3.ipynb)</br>
-[Physical Stress Model](notebooks\stress_predicton_final.ipynb)</br>
-[Body Performance Model](notebooks\body_performance.ipynb)</br>
-[Travel Insurance Prediction Model](notebooks\travel_insurance_prediction.ipynb)
+>[Stroke Prediction Model](notebooks\stroke_prediction3.ipynb)</br>
+>[Physical Stress Model](notebooks\stress_predicton_final.ipynb)</br>
+>[Body Performance Model](notebooks\body_performance.ipynb)</br>
+>[Travel Insurance Prediction Model](notebooks\travel_insurance_prediction.ipynb)
 
 ### Heroku Deployment 
-[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)
+[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)</br>
 Environment [Requirements](app\requirements.txt) for app to run on local computer
 
 ### Presentation slides
