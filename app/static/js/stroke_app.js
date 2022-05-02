@@ -66,19 +66,42 @@ function doCheck(event) {
         "SkinCancer_Yes": parseBool(cancer),
     }
 
+    // check for missing field values 
+    console.log("sleeptime: " + sleepTime);
+    
+    var errorMessage = "Please enter:"; //13 characters
+
+    if (sleepTime==""){errorMessage+= " Sleep time;" }
+    if (height==""){errorMessage+= " Height;"}
+    if (weight==""){errorMessage+= " Weight;"}
+    if (physicalHealth==""){errorMessage+= " Physical Health;"}
+    if (mentalHealth==""){errorMessage+= " Mental Health;"}
+
+    console.log(errorMessage)
     console.log(data);
 
-    d3.json(
-        "/stroke_predict", {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {
-                "Content-type": "application/json; charset=UTF-8"
+    if (errorMessage.length > 13) {
+        var outcome = "Unknown";
+        var alertOutcomeDisplay = d3.select("#alertOutcome");
+        outcome = errorMessage
+        alertOutcomeDisplay.attr("class", "alert alert-danger");
+        alertOutcomeDisplay.text(outcome);
+        alertOutcomeDisplay.style("display", "block");
+    }
+    
+    else {
+        d3.json(
+            "/stroke_predict", {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8"
+                }
             }
-        }
-    ).then(
-        (data) => showResult(data)
-    );
+        ).then(
+            (data) => showResult(data)
+        );
+    }
 
 }
 
@@ -89,6 +112,9 @@ function showResult(data) {
     var outcome = "Unknown";
     var alertOutcomeDisplay = d3.select("#alertOutcome");
 
+
+    console.log(data["age"]);  
+    // error checking
     if (data["result"][0] == 1) {
         outcome = "You have a high chance of having a stroke";
         alertOutcomeDisplay.attr("class", "alert alert-success");
@@ -96,6 +122,7 @@ function showResult(data) {
         outcome = "You should have no stroke";
         alertOutcomeDisplay.attr("class", "alert alert-info");
     }
+
 
     alertOutcomeDisplay.text(outcome);
     alertOutcomeDisplay.style("display", "block");
