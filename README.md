@@ -51,11 +51,11 @@ For exploratory data analysis, train, test, validate and generating models we us
 >[Travel Insurance Prediction Model](notebooks\travel_insurance_prediction.ipynb)
 
 ### Heroku Deployment 
-[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)</br>
-Environment [Requirements](app\requirements.txt) for app to run on local computer
+>[Heroku_HealthApp](https://health-app-ah.herokuapp.com/index.html)</br>
+>Environment [Requirements](app\requirements.txt) for app to run on local computer
 
 ### Presentation slides
->[link to Google doc](https://docs.google.com/presentation/d/1LHusZiVUhgSsV_HqJe-RtlS_o659OSEpfjRECQO6ge4/edit#slide=id.p8)  
+>[Link to Google doc](https://docs.google.com/presentation/d/1LHusZiVUhgSsV_HqJe-RtlS_o659OSEpfjRECQO6ge4/edit#slide=id.p8)  
 
 ### Visualisations
 
