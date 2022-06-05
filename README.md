@@ -1,43 +1,29 @@
 # MACHINE LEARNING PROJECT
 
-![Logo](images/HealthAppLogo.png)  
-
-
 ## Health App - Machine Learning   
 
 ### Scope
     Build a Health app to perform health predictions for various scenarios by 
     utilising machine learning algorithms, python libraries and
     host on a cloud platform with public access.
-
-### About us: 
-    DAJK Team: “Does AI Just Know”? 
-    Daniela Cornea (DC)
-    Anh Huong (AH)
-    Josh Lowe (JL)
-    Kelvin Nguyen (KN)
-
-<img src="images\heart3.png" width="20%" height="20%"> 
+![app_intro](images/app_intro.gif)
 
 ### Software
     Python, Pandas, Seaborn, Matplotlib, Plotly Express, TQDM, Sklearn,  
     XGBoost, nltk,  Pickle, Flask API, HTML/CSS/Bootstrap, other.
 
 ### Datasets
+
+#### Data Sources
+    Kaggle
+    Dataworld
+
 #### Selected datasets:
 >[Heart Disease](data\heart_2020_cleaned.csv) </br>
 >[Stress Lysis](data\Stress-Lysis.csv)</br>
 >[Body Performance](data\bodyPerformance.csv)</br>
 >[Travel Insurance Predictions](data\TravelInsurancePrediction.csv)</br>
 </br>
-
-#### Other testing datasets:
->[Personality Classification](data\psyc.csv)</br>
->[Absenteeism at work.csv](data\Absenteeism_at_work2.csv) 
-
-#### Data Sources
-    Kaggle
-    Dataworld
 
 ### Machine Learning Models Overview
 
@@ -67,11 +53,11 @@ For exploratory data analysis, train, test, validate and generating models we us
 
 ![Body_Performance_Blood_Presure](images/Body_Performance_Blood_Pressure_by_Class_DC_Fig6a.png)  
 
+### About us: 
+    DAJK Team: “Does AI Just Know”? 
+    Daniela Cornea (DC)
+    Anh Huong (AH)
+    Josh Lowe (JL)
+    Kelvin Nguyen (KN)
 
-
-
-
-
-
-
-
+<img src="images\heart3.png" width="20%" height="20%"> 
